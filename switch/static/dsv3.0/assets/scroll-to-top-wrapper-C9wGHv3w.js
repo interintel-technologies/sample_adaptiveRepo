@@ -1,0 +1,1 @@
+import{a as t,j as i}from"./index-C2PWchud.js";function l({threshold:r=300}){const[o,e]=t.useState(!1),s=()=>{window.pageYOffset>r?e(!0):e(!1)};return t.useEffect(()=>(window.addEventListener("scroll",s),()=>{window.removeEventListener("scroll",s)}),[]),i.jsx(i.Fragment,{children:"sadsad"})}export{l as default};

@@ -1,0 +1,1 @@
+import{a as e,j as u}from"./index-C2PWchud.js";import"./number-input-CfcFoMf9.js";import"./InputMixin-CGm-oGk-.js";const i=({element:r,submitForm:s})=>{const t=e.useRef(null);return e.useEffect(()=>{if(t.current&&r){const n=t.current;n.e=r,n.submitForm=s}},[r]),u.jsx(u.Fragment,{children:r&&u.jsx("number-input",{id:"number-input",ref:t})})};export{i as default};

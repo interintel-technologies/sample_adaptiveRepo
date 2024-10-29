@@ -1,0 +1,1 @@
+import{a,j as t}from"./index-C2PWchud.js";import"./empty-view-B1-e8K41.js";const p=({element:r})=>{const s=a.useRef(null);return a.useEffect(()=>{s.current&&r&&(s.current.e=r)},[r]),t.jsx(t.Fragment,{children:r?t.jsx("email-summary",{ref:s}):t.jsx("p",{children:"Loading data..."})})};export{p as default};

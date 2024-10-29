@@ -1,0 +1,215 @@
+{% load interface_tags %}
+<!doctype html>
+<html lang="en" >
+<head>
+  {% if params.response.get_gateway_details.google_tag_code  %}
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{params.response.get_gateway_details.google_tag_code}}"></script>
+  <script> 
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', '{{params.response.get_gateway_details.google_tag_code}}'); 
+  </script>
+
+{% endif %}
+
+<script>
+  if (localStorage.getItem('stepParams') || sessionStorage.getItem('stepParams') ) {
+  // Remove stepParams from localStorage
+  localStorage.removeItem('stepParams');
+  sessionStorage.removeItem('stepParams');
+
+}
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>{{params.response.get_gateway_details.name }}</title>
+
+
+  <link rel="icon" href="/media/{% if params.response.get_gateway_details.icon_image %}{{params.response.get_gateway_details.icon_image}}{% else %}upc_institution_icon_image/InterIntel_Icon.png{% endif %}">
+
+  <meta name="theme-color" content="{{params.response.get_gateway_details.default_color}}">
+
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Adaptive Ui">
+  <link rel="stylesheet" href="/static/dsv2.0/node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Adaptive Ui">
+
+  <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+
+  <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@username">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="adaptive-ui">
+  <meta property="og:image" content="images/manifest/icon-144x144.png" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="manifest" href="/manifest/">
+  
+  
+
+<link rel="stylesheet" href="/static/dsv3.0/richtexteditor/rte_theme_default.css" />
+<script type="text/javascript" src="/static/dsv3.0/richtexteditor/rte.js"></script>
+<script>RTE_DefaultConfig.url_base='richtexteditor'</script>
+<script type="text/javascript" src='/static/dsv3.0/richtexteditor/plugins/all_plugins.js'></script>
+
+
+  <script>
+    let PAYLOAD;
+    let CSRFTOKEN;
+
+  </script>
+  
+   <script>
+    
+    const None = ''
+    const False = false
+    const True = true
+
+
+    const params = {{ params|safe }};
+    console.log("params ",params)
+    window.RELATIVE_POSITION = false
+    const params2 = {{request|safe}}
+    console.log("params 2 ",params2)
+
+    window.REQUEST_PAYLOAD = params2
+
+    window.PAYLOAD = params
+    window.APPTITLE = "{{params.response.get_gateway_details.name}}"
+    window.CSRFTOKEN = "{{csrf_token}}"
+
+    window.TEMPLATE = "service"
+
+
+    window.NO_NETWORKING = false;
+
+    // PARAMS - PAYLOAD - VALUES
+    // ROUTE - PATH 
+    // HOST - HOST NAME 
+    // TEMPLATE_FILE - ACTUAL FILE EG. LANDING,SERVICE 
+    // GATEWAY - NAME 
+    // FAVICON 
+    // DESCRIPTION 
+    // PAGE 
+    // SERVICE
+
+
+    // EXAMPLE:-
+
+    // https://mipay.cash/home/services/#/contact-us/contact-us
+    
+    // home
+    
+  </script>
+
+
+   {% if request.is_secure %}
+   <script>
+     if("serviceWorker" in navigator){
+       window.addEventListener("load",function(){navigator.serviceWorker.register("service-worker.js",{scope:"/"})})
+     }
+   </script>
+ {% endif %}
+ 
+  <script>
+      if ('serviceWorker' in navigator && window.REGISTER_SW) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: '/',
+          });
+        });
+      }
+
+      window.process = {env: {NODE_ENV: 'production'}};
+
+  </script>
+
+  <style>
+
+    /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+
+
+    html {
+      background-color: #fff;
+      font-size: 14px;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      min-width: 300px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      text-rendering: optimizeLegibility;
+
+
+      --app-default-color: #0d47a1;
+      --app-secondary-color: #e43537;
+      --app-primary-color: #ffff;
+      --app-accent-color: #0d47a1;
+
+
+
+
+    }
+    html {
+      box-sizing: border-box;
+    }
+    * {
+      box-sizing: inherit;
+    }
+    :after, :before {
+      box-sizing: inherit;
+    }
+
+    body::-webkit-scrollbar {
+      width: 5px;
+      background: var(--white-ter);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: var(--white-bis);
+    }
+
+
+  </style>
+
+<script type="module" crossorigin src="/static/dsv3.0/assets/index-C2PWchud.js"></script>
+<link rel="stylesheet" crossorigin href="/static/dsv3.0/assets/index-BVKXu6s1.css">		  
+
+<body>
+  
+<noscript>
+  Please enable JavaScript to view this website.
+</noscript>
+
+
+  <div id="root"></div>
+
+  <script>
+    var editor1 = new RichTextEditor("#div_editor1");
+    //editor1.setHTMLCode("Use inline HTML or setHTMLCode to init the default content.");
+  </script>
+
+</body>
+</html>

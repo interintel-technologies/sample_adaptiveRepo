@@ -1,0 +1,1 @@
+import{a as t,j as r}from"./index-C2PWchud.js";import"./calendar-element-C00wmKBV.js";import"./utils-mixin-D5aAiqNi.js";const d=({element:e})=>{const a=t.useRef(null);return t.useEffect(()=>{a.current&&e&&(a.current.e=e)},[e]),r.jsx(r.Fragment,{children:e?r.jsx("calendar-element",{id:"calendar-element",ref:a}):r.jsx("p",{children:"Loading data..."})})};export{d as default};

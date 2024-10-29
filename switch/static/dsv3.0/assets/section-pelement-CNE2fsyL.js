@@ -1,0 +1,1 @@
+import{B as i}from"./base-element-5lxvCIHt.js";import{u as s}from"./utils-mixins-2-CV_UYnIr.js";const m=class extends s(i){static get is(){throw new DOMException("Extending [SectionPElementBase] must implement `static get is()`")}firstUpdated(t){super.firstUpdated(t)}init(t,e){super.init(t,e)}};export{m as S};

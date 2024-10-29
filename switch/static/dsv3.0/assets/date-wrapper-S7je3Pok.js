@@ -1,0 +1,1 @@
+import{a as e,j as n}from"./index-C2PWchud.js";import"./date-D9zgt7Gf.js";import"./InputMixin-CGm-oGk-.js";import"./utils-mixin-D5aAiqNi.js";const o=({element:t})=>{const r=e.useRef(null);return e.useEffect(()=>{if(r.current&&t){const p=r.current;p.e=t}},[t]),n.jsx("div",{children:n.jsx("date-input",{id:"date-input",ref:r})})};export{o as default};
