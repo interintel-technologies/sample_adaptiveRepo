@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: dsv3-pipeline-run
+  name: dsv3-pipeline-run-test
   namespace: development
 spec:
   pipelineRef:
