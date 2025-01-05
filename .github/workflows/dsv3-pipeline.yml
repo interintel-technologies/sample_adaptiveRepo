@@ -25,6 +25,7 @@ jobs:
         run: |
           kubectl config set-credentials github-actions-sa --token=$PIPELINE_TOKEN
           kubectl config set-cluster development-k8s-cluster --server=https://development-k8s-cluster-dns-edn1s8zb.hcp.southafricanorth.azmk8s.io:443 --insecure-skip-tls-verify=true
+          kubectl config set-context development-k8s-cluster --cluster=development-k8s-cluster --user=github-actions-sa
           kubectl config use-context development-k8s-cluster
           kubectl get nodes
 
