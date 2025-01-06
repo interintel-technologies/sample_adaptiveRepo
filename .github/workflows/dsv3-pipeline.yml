@@ -31,4 +31,4 @@ jobs:
 
       - name: Trigger Tekton Pipeline
         run: |
-          kubectl apply -f dsv3-pipeline-run-test.yaml
+          kubectl apply -f dsv3-pipeline-run-testt.yaml
