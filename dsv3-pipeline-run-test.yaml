@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: dsv3-pipeline-run-test
+  namespace: development
+spec:
+  pipelineRef:
+    name: dsv3-pipeline
+  params:
+    - name: git-url
+      value: https://github.com/interintel-technologies/sample_adaptiveRepo.git
+    - name: branch
+      value: main
+    - name: switch-url
+      value: https://github.com/interintel-technologies/sample_switchRepo.git #SHOULD BE SWITCH REPO
+    - name: github-token
+      value: "$(ACCESS_TOKEN)"
+    - name: head-branch
+      value: main 
+    - name: base-branch
+      value: main
+
+  workspaces:
+    - name: shared-workspace
+      emptyDir: {}
