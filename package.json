@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend build test",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building frontend assets...' && mkdir -p dist/assets && touch dist/assets/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
+
