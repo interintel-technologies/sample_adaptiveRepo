@@ -1,1 +1,0 @@
-import{a as t,j as s}from"./index-C2PWchud.js";import"./datasource-mixin-DMQBE4lo.js";const p=({element:e})=>{const r=t.useRef(null);return t.useEffect(()=>{r.current&&e&&(r.current.e=e)},[e]),s.jsx("div",{children:e?s.jsx("space-element",{id:"spacer-element",ref:r}):s.jsx("p",{children:"Loading data..."})})};export{p as default};

@@ -1,4 +1,5 @@
 {% load interface_tags %}
+{% load static %}
 <!doctype html>
 <html lang="en" >
 <head>
@@ -23,6 +24,13 @@
   sessionStorage.removeItem('stepParams');
 
 }
+
+window.onerror = function (message, source, lineno, colno, error) {
+  if (message.includes("Failed to find editor element")) {
+    return true;
+  }
+};
+
 </script>
 
   <meta charset="utf-8">
@@ -41,6 +49,8 @@
   <link rel="stylesheet" href="/static/dsv2.0/node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/static/dsv3.0/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/static/dsv3.0/App.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -90,9 +100,10 @@
 
     const params = {{ params|safe }};
     console.log("params ",params)
+
     window.RELATIVE_POSITION = false
     const params2 = {{request|safe}}
-    console.log("params 2 ",params2)
+
 
     window.REQUEST_PAYLOAD = params2
 
@@ -194,9 +205,24 @@
 
   </style>
 
-<script type="module" crossorigin src="/static/dsv3.0/assets/index-C2PWchud.js"></script>
-<link rel="stylesheet" crossorigin href="/static/dsv3.0/assets/index-BVKXu6s1.css">		  
+  <!-- Preload CSS without crossorigin if it's from the same origin -->
+  <link rel="preload" href="{% static 'dsv3.0/assets/main.css' %}" as="style">
 
+  <link rel="stylesheet" href="{% static 'dsv3.0/assets/main.css' %}" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="preload" href="{% static 'dsv3.0/assets/components.css' %}" as="style">
+
+  <link rel="stylesheet" href="{% static 'dsv3.0/assets/components.css' %}" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="preload" href="{% static 'dsv3.0/assets/vendor.css' %}" as="style">
+
+  <link rel="stylesheet" href="{% static 'dsv3.0/assets/vendor.css' %}" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Preload JavaScript -->
+<link rel="preload" href="/static/dsv3.0/assets/main.js" as="script" crossorigin>
+<link rel="preload" href="/static/dsv3.0/assets/vendor.js" as="script" crossorigin>
+
+    
 <body>
   
 <noscript>
@@ -209,7 +235,15 @@
   <script>
     var editor1 = new RichTextEditor("#div_editor1");
     //editor1.setHTMLCode("Use inline HTML or setHTMLCode to init the default content.");
+    if (editor1) {
+  // Initialize the editor
+} else {
+  console.warn("Editor element '#div_editor1' not found.");
+}
+
   </script>
+  <script type="module" crossorigin src="/static/dsv3.0/assets/main.js"></script>
+  <script type="module" crossorigin src="/static/dsv3.0/assets/vendor.js"></script>
 
 </body>
 </html>

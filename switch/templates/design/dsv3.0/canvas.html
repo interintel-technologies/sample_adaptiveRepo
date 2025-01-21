@@ -102,6 +102,16 @@
 			</script>
 			<!-- End Google Analytics -->
 		{% endif %}
+
+		
+		
+  <!-- Preload CSS without crossorigin if it's from the same origin -->
+  <link rel="preload" href="/static/dsv3.0/assets/main.css" as="style">
+  <link rel="stylesheet" href="/static/dsv3.0/assets/main.css" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Preload JavaScript -->
+  <link rel="preload" href="/static/dsv3.0/assets/main.js" as="script" crossorigin>
+
 	</head>
 	<body>
 		{% if params.response.get_gateway_details.google_tag_code  %}
@@ -158,12 +168,6 @@
 		<!-- /static/adaptive-ui-web/ -->
 		<script src="/static/dsv2.0/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-		<!-- /static/adaptive-ui-web/ -->
-
-		<script type="module" crossorigin src="/static/dsv3.0/assets/index-Ctpw4P22.js"></script>
-		<link rel="stylesheet" crossorigin href="/static/dsv3.0/assets/index-BVKXu6s1.css">		  
-										
-
 		
 		<script>
 			function subscribe() {
@@ -212,6 +216,6 @@
 				Sentry.init({dsn: 'https://c1d4eca95ac7417eaa4a09a16b4b2cf9@sentry.io/1272205'});
 			}
 		</script>
-		<!-- End Sentry Exception Tracking -->
+	  <script type="module" crossorigin src="/static/dsv3.0/assets/main.js"></script>
 	</body>
 </html>

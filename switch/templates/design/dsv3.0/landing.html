@@ -1,4 +1,5 @@
 {% load interface_tags %}
+{% load static %}
 <!doctype html>
 <html lang="en" >
 <head>
@@ -17,12 +18,24 @@
 {% endif %}
 
 <script>
+  console.warn = function () {};
+
+</script>
+
+<script>
+
   if (localStorage.getItem('stepParams') || sessionStorage.getItem('stepParams') ) {
   // Remove stepParams from localStorage
   localStorage.removeItem('stepParams');
   sessionStorage.removeItem('stepParams');
 
 }
+
+window.onerror = function (message, source, lineno, colno, error) {
+  if (message.includes("Failed to find editor element")) {
+    return true;
+  }
+};
 </script>
 
   <meta charset="utf-8">
@@ -36,38 +49,9 @@
   <meta name="theme-color" content="{{params.response.get_gateway_details.default_color}}">
 
 
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Adaptive Ui">
-  <link rel="stylesheet" href="/static/dsv2.0/node_modules/@fortawesome/fontawesome-free/css/all.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Adaptive Ui">
-
-  <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
-
-  <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#3f51b5">
-  <meta name="msapplication-tap-highlight" content="no">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@username">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="adaptive-ui">
-  <meta property="og:image" content="images/manifest/icon-144x144.png" />
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="manifest" href="/manifest/">
   
-  
+  <link rel="preload" href="/static/dsv3.0/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/static/dsv3.0/App.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <link rel="stylesheet" href="/static/dsv3.0/richtexteditor/rte_theme_default.css" />
 <script type="text/javascript" src="/static/dsv3.0/richtexteditor/rte.js"></script>
@@ -75,25 +59,22 @@
 <script type="text/javascript" src='/static/dsv3.0/richtexteditor/plugins/all_plugins.js'></script>
 
 
-  <script>
-    let PAYLOAD;
-    let CSRFTOKEN;
-
-  </script>
   
    <script>
-    
+        let PAYLOAD;
+        let CSRFTOKEN;
     const None = ''
     const False = false
     const True = true
 
  
-
     const params = {{ params|safe }};
-    console.log("params ",params)
+    console.log("params ",params);
 
+       
    const params2 = {{request|safe}}
-    console.log("params 2 ",params2)
+
+
 
     window.REQUEST_PAYLOAD = params2
 
@@ -135,22 +116,6 @@ const jsonPayload = convertToJson(params);
     window.NO_NETWORKING = false;
     window.RELATIVE_POSITION = false
 
-    // PARAMS - PAYLOAD - VALUES
-    // ROUTE - PATH 
-    // HOST - HOST NAME 
-    // TEMPLATE_FILE - ACTUAL FILE EG. LANDING,SERVICE 
-    // GATEWAY - NAME 
-    // FAVICON 
-    // DESCRIPTION 
-    // PAGE 
-    // SERVICE
-
-
-    // EXAMPLE:-
-
-    // https://mipay.cash/home/services/#/contact-us/contact-us
-    
-    // home
     
   </script>
 
@@ -223,11 +188,24 @@ const jsonPayload = convertToJson(params);
 
 
   </style>
+      
+      <!-- Preload CSS without crossorigin if it's from the same origin -->
+      <link rel="preload" href="{% static 'dsv3.0/assets/main.css' %}" as="style">
 
-<script type="module" crossorigin src="/static/dsv3.0/assets/index-C2PWchud.js"></script>
-<link rel="stylesheet" crossorigin href="/static/dsv3.0/assets/index-BVKXu6s1.css">		  
+      <link rel="stylesheet" href="{% static 'dsv3.0/assets/main.css' %}" onload="this.onload=null;this.rel='stylesheet'">
+    
+      <link rel="preload" href="{% static 'dsv3.0/assets/components.css' %}" as="style">
+
+      <link rel="stylesheet" href="{% static 'dsv3.0/assets/components.css' %}" onload="this.onload=null;this.rel='stylesheet'">
+
+      <link rel="preload" href="{% static 'dsv3.0/assets/vendor.css' %}" as="style">
+
+      <link rel="stylesheet" href="{% static 'dsv3.0/assets/vendor.css' %}" onload="this.onload=null;this.rel='stylesheet'">
 
 
+      <!-- Preload JavaScript -->
+      <link rel="preload" href="{% static 'dsv3.0/assets/main.js' %}" as="script" crossorigin>
+      <link rel="preload" href="{% static 'dsv3.0/assets/vendor.js' %}" as="script" crossorigin>
 
 
 </head>
@@ -245,8 +223,16 @@ const jsonPayload = convertToJson(params);
 
   <script>
     var editor1 = new RichTextEditor("#div_editor1");
-    //editor1.setHTMLCode("Use inline HTML or setHTMLCode to init the default content.");
   </script>
 
+<script type="module" crossorigin src="{% static 'dsv3.0/assets/main.js' %}"></script>
+<script type="module" crossorigin src="{% static 'dsv3.0/assets/vendor.js' %}"></script>
+
+<script>
+  console.error = function () {};
+  console.warn = function () {};
+
+
+</script>
 </body>
 </html>
