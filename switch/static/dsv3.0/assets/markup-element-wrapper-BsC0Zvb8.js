@@ -1,5 +1,0 @@
-import{r as i,g as u,i as o,k as l,a,j as r}from"./index-C2PWchud.js";import{B as p}from"./base-element-5lxvCIHt.js";import{u as c}from"./utils-mixin-D5aAiqNi.js";const n=class extends c(p){static get is(){return"markup-element"}static get properties(){return{icon:String,data_name:String,color:String,title:String,maxlength:Number,pattern:String,required:Boolean,markup:String}}updated(t){if(t.has("e")){var e=this;e.title=n.toTitleCase(this.e.name),e.icon=this.e.icon,e.markup=escape(this.e.defaultValue+this.e.styles)}}};class s extends n{static get styles(){return[i(u),o`
-        :host {
-          display: block;
-        }
-      `]}updated(e){e.has("e")&&(this.shadowRoot.querySelector("#content").innerHTML=unescape(this.e.defaultValue))}render(){return l` <div id="content"></div> `}}customElements.define(s.is,s);const h=({element:t})=>{const e=a.useRef(null);return a.useEffect(()=>{e.current&&t&&(e.current.e=t)},[t]),r.jsx(r.Fragment,{children:t?r.jsx("markup-element",{id:"markup-element",ref:e}):r.jsx("p",{children:"Loading data..."})})};export{h as default};

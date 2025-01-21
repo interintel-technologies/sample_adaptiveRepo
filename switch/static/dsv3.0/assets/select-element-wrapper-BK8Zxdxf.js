@@ -1,1 +1,0 @@
-import{a as s,j as r}from"./index-C2PWchud.js";import"./select-element-GuC7mP6J.js";import"./InputMixin-CGm-oGk-.js";const n=({element:e})=>{const t=s.useRef(null);return s.useEffect(()=>{t.current&&e&&(t.current.e=e)},[e]),r.jsx("div",{children:e?r.jsx("select-element",{id:"select-element",ref:t}):r.jsx("p",{children:"Loading data..."})})};export{n as default};

@@ -1,1 +1,0 @@
-import{a,j as e}from"./index-C2PWchud.js";import"./text-area-DVnsF1h0.js";import"./utils-mixin-D5aAiqNi.js";import"./InputMixin-CGm-oGk-.js";const x=({element:r})=>{const t=a.useRef(null);return a.useEffect(()=>{t.current&&r&&t.current.e!==r&&(t.current.e=r)},[r]),e.jsx(e.Fragment,{children:r&&e.jsx("text-area",{id:"text-area",ref:t})})};export{x as default};
