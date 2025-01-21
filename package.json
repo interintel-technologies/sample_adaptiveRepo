@@ -4,7 +4,7 @@
   "description": "Frontend build test",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building frontend eetxvg....' && mkdir -p dist/assets && touch dist/assets/index.html"
+    "build": "echo 'Building frontend zfsfetxvg....' && mkdir -p dist/assets && touch dist/assets/index.html"
   },
   "dependencies": {},
   "devDependencies": {}
