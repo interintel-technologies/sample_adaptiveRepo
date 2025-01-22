@@ -4,7 +4,7 @@
   "description": "Frontend build test",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building frontend assets......' && mkdir -p dist && touch dist/index.html"
+    "build": "echo 'Building frontend assets.........' && mkdir -p dist && touch dist/index.html"
   },
   "dependencies": {},
   "devDependencies": {}
