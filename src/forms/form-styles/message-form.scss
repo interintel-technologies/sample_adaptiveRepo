@@ -1,0 +1,46 @@
+#form-message-wrapper{
+    .is-9 {
+        border-right: 1px solid grey;
+    }
+    .card-header {
+        display: flex;
+        justify-content: center;
+        background-color: var(--app-accent-color);
+        margin-top: 2rem;
+    }
+    .card-header-title {
+        text-align: center;
+        color: white !important;
+        margin: 0 !important;
+        display: block;
+    }
+    adaptive-ui-icon {
+        fill: var(--app-default-color);
+        margin-right: 1.5rem;
+    }
+    .hero-body {
+        padding: 3rem 3rem !important;
+    }
+    h4 {
+        color: var(--app-default-color) !important;
+        margin: 0 !important;
+    }
+    .tip {
+        border-bottom: 0.5px solid grey;
+    }
+    .tip:last-child {
+        border-bottom: none;
+    }
+    .tip:hover > adaptive-ui-icon {
+        fill: var(--app-secondary-color);
+    }
+    h3 {
+        margin-top: 0 !important;
+    }
+    .card-content-text {
+        padding-top:8px;
+        padding-bottom:8px;
+    }
+
+}
+    

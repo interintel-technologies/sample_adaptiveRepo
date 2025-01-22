@@ -1,0 +1,24 @@
+# NUMBER INPUT
+
+![Number Input](https://i.postimg.cc/cLxh6VPG/Screenshot-2022-12-15-153914.png)
+
+## Description
+
+Number input element.
+
+## Configuration
+
+1. *MIN* - Minimum length of characters in the input. Set in `min`
+2. *MAX* - Maximum length of characters in the input. Set in `max`
+3. *REQUIRED* - Is the value of the input required. Set in `required`
+4. *HINT* - Hint that appears in the input if there is nothing in the input. Set in `details` with a key of `hint`
+5. *HELP* - Text that appears below input. Set in `details` with a key of `help`
+
+## Functionality
+
+1. If max is specified, the inputted characters should not be allowed to be more than max
+2. If min is specified the inputted characters should not be allowed to be less than min
+3. Min and max should be included in the element validation during submit
+4. If default value is specified, that will be the value in the input when the element displays
+5. If required is specified, the element should validate as invalid during submission, form should not submit
+6. The submitted value when valid should have the name as the one specified in the input variable

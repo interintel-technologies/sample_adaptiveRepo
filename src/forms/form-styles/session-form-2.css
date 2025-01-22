@@ -1,0 +1,212 @@
+#session-2-wrapper .progress.is-primary:indeterminate {
+  background-image: linear-gradient(to right, var(--app-default-color) 30%, #dbdbdb 30%) !important;
+}
+#session-2-wrapper .pro-container {
+  margin: 16px;
+}
+#session-2-wrapper .limiter {
+  width: 100%;
+  margin: 0 auto;
+  top: 11px;
+  position: relative;
+}
+#session-2-wrapper .session-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+#session-2-wrapper .overlay {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  position: absolute;
+  background: var(--app-default-color);
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#session-2-wrapper .wrap-session {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+#session-2-wrapper .session-form {
+  width: 45%;
+  min-height: 100vh;
+  display: block;
+  background-color: #f7f7f7;
+  padding: 173px 55px 55px 55px;
+}
+#session-2-wrapper .session-title {
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+}
+#session-2-wrapper .padd {
+  padding-bottom: 43px;
+}
+#session-2-wrapper .left-out-right-in-animation {
+  animation: slide-out-left-in-right 0.7s;
+}
+#session-2-wrapper .right-out-left-in-animation {
+  animation: slide-out-right-in-left 0.4s;
+}
+@keyframes slide-out-right-in-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-left-in-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#session-2-wrapper .nav {
+  position: relative;
+  top: 13px;
+  cursor: pointer;
+}
+#session-2-wrapper .nav:hover {
+  fill: var(--app-secondary-color);
+}
+#session-2-wrapper .nav:active {
+  transform: scale(0.93);
+}
+#session-2-wrapper #backIcon {
+  float: left;
+}
+#session-2-wrapper .session-inter {
+  width: 55%;
+  background-color: var(--app-default-color);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#session-2-wrapper .session-inter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+#session-2-wrapper .image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 80px;
+  background-color: var(--app-default-color);
+}
+#session-2-wrapper img {
+  max-width: 30% !important;
+  margin-bottom: 80px !important;
+}
+#session-2-wrapper .title.is-1 {
+  font-size: 4rem;
+  margin-bottom: 30px !important;
+  color: #fff !important;
+}
+#session-2-wrapper h4 {
+  width: 71% !important;
+  color: #fff !important;
+}
+@media screen and (max-width: 960px) {
+  #session-2-wrapper img {
+    max-width: 50% !important;
+    margin-bottom: 50px !important;
+  }
+}
+@media screen and (max-width: 860px) {
+  #session-2-wrapper .session-form {
+    width: 100%;
+  }
+  #session-2-wrapper .session-inter, #session-2-wrapper .overlay {
+    display: none;
+  }
+}
+@media screen and (max-width: 545px) {
+  #session-2-wrapper .session-inter, #session-2-wrapper .overlay {
+    display: none;
+  }
+  #session-2-wrapper .session-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 854px) {
+  #session-2-wrapper .session-inter, #session-2-wrapper .overlay {
+    display: none;
+  }
+  #session-2-wrapper .session-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  #session-2-wrapper .session-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #session-2-wrapper .session-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #session-2-wrapper .session-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #session-2-wrapper .session-form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}/*# sourceMappingURL=session-form-2.css.map */

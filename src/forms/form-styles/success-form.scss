@@ -1,0 +1,29 @@
+
+    .success-form-container {
+        display:flex;
+        flex-direction: column;
+        padding: 50px 50px 40px 40px;
+
+        .success-form-logo {    
+            width: 150px;
+            object-fit:contain;
+        }
+        .left{
+            justify-content: flex-start;
+        }
+        .title {
+            color:  #43A047;
+        }
+        .center {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 550px){ 
+            .left{
+                justify-content: center;
+            }
+        }
+
+        
+    }   
+    

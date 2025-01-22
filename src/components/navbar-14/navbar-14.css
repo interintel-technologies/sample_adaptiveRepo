@@ -1,0 +1,68 @@
+.navbar-item .logo-img {
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+}
+.navbar-item img {
+    max-height:3.75rem !important;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #333333;
+}
+.zua-c{
+  background: var(--app-default-color)!important;
+  color: #fff!important;
+}
+.nav-header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+.navbar{
+    padding: 10px 0;
+}
+.logo{
+    font-weight: bolder;
+    font-size: 19px;
+}
+.nav-link a{
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+.nav-link a::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--app-default-color);
+    border-radius: 50%;
+    position: relative;
+    right: 6px;
+    visibility: hidden;
+}
+.nav-link a:hover::before{
+    visibility: visible;
+}
+.nav-link a:hover{
+    color: var(--app-default-color);
+    background: none;
+}
+.nav-link a.active{
+    color: var(--app-default-color);
+    background: none;
+}
+.nav-link a::before.active{
+    visibility: visible;
+}

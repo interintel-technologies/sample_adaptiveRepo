@@ -1,0 +1,62 @@
+import {utilsMixin} from '../../core/mixins/utils-mixin';
+import {SerializableElement} from '../../core/serializable-element';
+
+
+export const NumberInputBase = class extends utilsMixin(SerializableElement) {
+  static get is() {
+    return 'number-input';
+  }
+
+  static get properties() {
+    return {
+      params: {type: Object, value: {}},
+      pageType: {type: Object, value: {}},
+      type: String,
+      columnSize: {type: Array},
+    };
+  }
+
+  getName() {
+    return this.e.formName;
+  }
+
+
+  validate() {
+    if (this.required && !this.getValue()) {
+      return new this.Validation(false, this.e.name + ' is Required');
+    }
+    const inputValueInt = this.getValue();
+    
+    if (inputValueInt.length < this.e.min || inputValueInt.length > this.e.max){
+
+      if(this.e.min == this.e.max){
+        return new this.Validation(false, this.e.name + ' value is invalid.Please enter a value that is '+this.e.max +' digits long');
+
+
+      }else{
+        return new this.Validation(false, this.e.name + ' value is invalid.Please enter a value between '+this.e.min +"—"+this.e.max);
+
+
+      }
+
+
+   }else{
+
+      return new this.Validation(true, 'valid');
+  }
+
+   
+  }
+
+  firstUpdated(changedProperties) {
+    super.firstUpdated(changedProperties);
+  }
+
+  init(pElement, loader) {
+    super.init(pElement, loader);
+    // this.required = pElement.min && pElement.min > 0;
+    this.required = this.e.required || (pElement.min && pElement.min > 0);
+
+    this.value = pElement.defaultValue || '';
+  }
+};

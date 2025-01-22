@@ -1,0 +1,63 @@
+User-agent: *
+Disallow: /admin/   
+Disallow: /accounts
+Disallow: /iic_editor
+Disallow: /metrics
+Disallow: /schema
+Disallow: /swagger
+Disallow: /redoc
+Disallow: /openapi/administration/
+Disallow: /openapi/upc/
+Disallow: /openapi/bridge/
+Disallow: /openapi/vcs/
+Disallow: /openapi/pos/
+Disallow: /openapi/crm/
+Disallow: /openapi/crc/
+Disallow: /openapi/paygate/
+Disallow: /openapi/inventory/
+Disallow: /openapi/seller/
+Disallow: /logout
+
+
+
+Allow: /
+
+Allow: /#/home/home
+
+Allow: /#/customer/about
+Allow: /#/business/about
+Allow: /#/log-in/log-in
+Allow: /#/mipay-privacy-policy/privacy-policy
+Allow: /#/mipay-terms-and-conditions/terms-and-conditions
+
+Allow: /#/home/summary
+Allow: /#/float/institution-float-summary
+Allow: /#/address-book/contacts
+Allow: /#/address-book/add-contact
+Allow: /#/address-book/file-upload-activities
+Allow: /#/messaging/inbox
+Allow: /#/messaging/compose
+Allow: /#/messaging/sent
+Allow: /#/messaging/outbound-status
+Allow: /#/messaging/dynamic-notification
+Allow: /#/messaging/code-statistics
+Allow: /#/account-requests/short-code-request
+Allow: /#/account-requests/short-codes-list
+Allow: /#/nenasasa-manual/user-manual
+Allow: /#/developer/settings
+Allow: /#/messaging/code-statistics
+Allow: /#/nenasasa-home/about
+Allow: /#/sms/sms
+Allow: /#/registration/register
+Allow: /#/email/email
+Allow: /#/whatsapp-api/whatsapp
+Allow: /#/sms/sms
+Allow: /#/reseller/reseller
+
+
+
+Sitemap: https://mipay.cash/sitemap.xml
+Sitemap: https://mipay.ke/sitemap.xml
+Sitemap: https://nenasasa.com/sitemap.xml
+Sitemap: https://nikobizz.com/sitemap.xml
+Sitemap: https://zua.ai/sitemap.xml

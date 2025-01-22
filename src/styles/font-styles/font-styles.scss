@@ -1,0 +1,10 @@
+
+@function getFontVariable() {
+    @return var(--family-sans-serif);
+}
+
+$font-family: getFontVariable(), sans-serif;
+
+h1, h2, h3, h4, h5, h6, p, label, a, .dropdown-item, button, span, text {
+    font-family: $font-family;
+}

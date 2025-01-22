@@ -1,0 +1,7 @@
+#feedback-form-wrapper img {
+  -o-object-fit: fit-content;
+     object-fit: fit-content;
+}
+#feedback-form-wrapper .column.is-5 {
+  padding: 20px;
+}/*# sourceMappingURL=feedback-form.css.map */

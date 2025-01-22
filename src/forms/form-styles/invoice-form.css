@@ -1,0 +1,58 @@
+#invoiceForm {
+  position: relative;
+  /* background-color: white !important; */
+  padding: 40px;
+  min-height: 100vh;
+}
+#invoiceForm header {
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100%;
+}
+#invoiceForm #makePayment {
+  justify-content: flex-end;
+}
+#invoiceForm footer {
+  width: 100%;
+  /* background-color: white !important; */
+}
+#invoiceForm .success-form-logo {
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#invoiceForm .invoice-header {
+  max-width: 30% !important;
+}
+#invoiceForm .button {
+  background-color: var(--app-default-color);
+  color: white;
+  height: 40px !important;
+  border: none;
+  padding: 0 20px;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
+}
+#invoiceForm .button:hover {
+  color: white !important;
+  border: none !important;
+}
+#invoiceForm .button:active {
+  transform: scale(1.05);
+  color: white !important;
+}
+#invoiceForm .ii__footer-col-link {
+  margin-right: 20px !important;
+}
+#invoiceForm .unpaid {
+  background-color: red;
+  position: absolute;
+  top: 24px;
+  left: -20px;
+  width: 200px;
+  padding: 10px 0px;
+  transform: rotate(-30deg);
+}
+#invoiceForm .title.is-4 {
+  color: white !important;
+  margin: auto;
+}/*# sourceMappingURL=invoice-form.css.map */

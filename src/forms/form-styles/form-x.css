@@ -1,0 +1,161 @@
+#form-x-wrapper .pro-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 4;
+}
+#form-x-wrapper .progress.is-small {
+  height: 8px !important;
+}
+#form-x-wrapper .progress.is-primary:indeterminate {
+  background-image: linear-gradient(to right, var(--app-accent-color) 30%, #dbdbdb 30%) !important;
+}
+#form-x-wrapper .overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 228, 228, 0.5);
+  z-index: 2;
+}
+#form-x-wrapper .form-x-card {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.03);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#form-x-wrapper .l-title {
+  position: relative;
+  top: -13px;
+}
+#form-x-wrapper .left-out-right-in-animation {
+  animation: slide-out-left-in-right 0.7s;
+}
+#form-x-wrapper .right-out-left-in-animation {
+  animation: slide-out-right-in-left 0.4s;
+}
+.MuiStep-root{
+  padding-left:0 !important;
+  padding-right: 0 !important;
+}
+.MuiStepLabel-root.MuiStepLabel-alternativeLabel {
+  justify-content: flex-start;
+  flex-direction: row !important;
+}
+.MuiStepConnector-root{
+     left: calc(-86% + 20px) !important;
+    right: calc(100% + 20px) !important;
+}
+
+#form-x-wrapper .MuiGrid-item{
+  padding-right:16px;
+}
+.css-1ujbrfw {
+  max-height: calc(-200px + 85vh) !important;
+}
+
+#grid-1{
+  background-color: var(--md-sys-color-secondaryContainer);
+  border-radius: var(--CornerLarge);
+  position: absolute;
+  left:50%;
+  top:20%;
+  width: 150%;
+  z-index: 2;
+  height: 50vh;
+  max-width: 60% !important;
+  overflow-y:scroll;
+
+}
+#grid-1::-webkit-scrollbar{
+  display: none;
+}
+@keyframes slide-out-right-in-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-left-in-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#form-x-wrapper .scroll-bar {
+  max-height: 404px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#form-x-wrapper .card-header {
+  padding-left: 32px;
+  padding-top: 11px;
+  padding-right: 32px;
+}
+#form-x-wrapper .nav {
+  position: relative;
+  top: 13px;
+  cursor: pointer;
+}
+#form-x-wrapper .nav:hover {
+  fill: var(--app-secondary-color);
+}
+#form-x-wrapper .nav:active {
+  transform: scale(0.93);
+}
+#form-x-wrapper #forwardIcon {
+  float: right;
+}
+#form-x-wrapper #backIcon {
+  float: left;
+}
+@media screen and (max-width: 1400px) {
+  #form-x-wrapper .scroll-bar {
+    max-height: 360px;
+  }
+}/*# sourceMappingURL=form-x.css.map */
+@media(max-width:600px){
+  #grid-1{
+   position: absolute;
+   top:90%;
+   /* bottom: 3.5rem; */
+   left:5%;
+   max-width:82% !important;
+   overflow: hidden;
+   height: auto;
+  max-height: 85vh;
+  padding-bottom: 1.5rem;
+  margin-bottom: 10px !important;
+  }
+  #grid-0 .MuiBox-root .css-1ujbrfw{
+    max-height: calc(85vh - 200px) !important;
+  }
+.modal-box{
+  overflow-y: scroll;
+  height: 90vh !important;
+
+}
+}

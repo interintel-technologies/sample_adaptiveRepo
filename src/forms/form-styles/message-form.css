@@ -1,0 +1,42 @@
+#form-message-wrapper .is-9 {
+  border-right: 1px solid grey;
+}
+#form-message-wrapper .card-header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--app-accent-color);
+  margin-top: 2rem;
+}
+#form-message-wrapper .card-header-title {
+  text-align: center;
+  color: white !important;
+  margin: 0 !important;
+  display: block;
+}
+#form-message-wrapper adaptive-ui-icon {
+  fill: var(--app-default-color);
+  margin-right: 1.5rem;
+}
+#form-message-wrapper .hero-body {
+  padding: 3rem 3rem !important;
+}
+#form-message-wrapper h4 {
+  color: var(--app-default-color) !important;
+  margin: 0 !important;
+}
+#form-message-wrapper .tip {
+  border-bottom: 0.5px solid grey;
+}
+#form-message-wrapper .tip:last-child {
+  border-bottom: none;
+}
+#form-message-wrapper .tip:hover > adaptive-ui-icon {
+  fill: var(--app-secondary-color);
+}
+#form-message-wrapper h3 {
+  margin-top: 0 !important;
+}
+#form-message-wrapper .card-content-text {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}/*# sourceMappingURL=message-form.css.map */

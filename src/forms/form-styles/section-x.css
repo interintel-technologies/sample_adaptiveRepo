@@ -1,0 +1,19 @@
+#section-x-wrapper .ii__container-main {
+  margin: 0 auto;
+  padding: 0 90px;
+}
+#section-x-wrapper .ii__container.ii__container--home {
+  padding-top: 30px;
+}
+#section-x-wrapper .ii__container {
+  max-width: 1068px;
+  margin-bottom: 9px;
+  padding-right: 24px;
+  padding-bottom: 25px;
+  padding-left: 24px;
+}
+#section-x-wrapper .wa__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}/*# sourceMappingURL=section-x.css.map */

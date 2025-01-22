@@ -1,0 +1,1 @@
+3. *COLUMNS_TO_PLOT* - The labels of the columns you wish to plot from the DataSource payload. It should be placed in the details Object as an array with a key of `columns_to_plot` e.g `"columns_to_plot":["UNDELIVERED","OFFLINE","UNKNOWN"]`.

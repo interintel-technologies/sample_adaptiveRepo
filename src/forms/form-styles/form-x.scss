@@ -1,0 +1,81 @@
+#form-x-wrapper{
+  .pro-container {
+    margin-left:10px;
+    margin-right:10px;
+    position: relative;
+    z-index: 4;
+  }
+  .progress.is-small {
+    height: 8px!important;
+  }
+  .progress.is-primary:indeterminate {
+    background-image: linear-gradient(to right,var(--app-accent-color) 30%,#dbdbdb 30%) !important;
+  }
+  .overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230,228,228, 0.5);
+    z-index: 2;
+  }
+  .form-x-card {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.03);
+    margin-left:8px; 
+    margin-right:8px;
+  }
+  .l-title {
+    position: relative;
+    top: -13px;
+  }
+  .left-out-right-in-animation {
+    animation:  slide-out-left-in-right 0.7s;  
+  }
+  .right-out-left-in-animation {
+    animation: slide-out-right-in-left 0.4s;
+  }
+  @keyframes slide-out-right-in-left {
+    0%   {opacity: 1; transform:translateX(0);}
+    49% {opacity: 0; transform:translateX(50%);}
+    50%   {opacity: 0; transform:translateX(-50%);}
+    100% {opacity: 1; transform:translateX(0);}
+  }
+  @keyframes slide-out-left-in-right {
+    0%   {opacity: 1; transform:translateX(0);}
+    49% {opacity: 0; transform:translateX(-50%);}
+    50%   {opacity: 0; transform:translateX(50%);}
+    100% {opacity: 1; transform:translateX(0);}
+  }
+  .scroll-bar {
+    max-height: 404px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .card-header {
+    padding-left: 32px;
+    padding-top: 11px;
+    padding-right: 32px;
+  }
+  .nav {
+    position: relative;
+    top:13px;
+    cursor: pointer;
+  }
+  .nav:hover {
+    fill: var(--app-secondary-color);
+  }
+  .nav:active {
+    transform: scale(0.93);
+  }
+  #forwardIcon {
+    float: right;
+  }
+  #backIcon {
+    float: left;
+  }
+  @media screen and (max-width: 1400px) {
+    .scroll-bar {
+      max-height: 360px;
+    }
+  }
+}

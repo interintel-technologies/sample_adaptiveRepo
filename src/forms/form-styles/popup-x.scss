@@ -1,0 +1,91 @@
+#popup-x-wrapper{
+
+    div.popup-container{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: none;
+        align-items: center;
+        top: 0;
+        left: -60px;
+        z-index: 9999;
+    }
+    .popup-overlay{
+        background-color: #000;
+        opacity: .6;
+    
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .popup-card{
+        width: 60%;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        position: fixed;
+        top: 28%;
+        left: 20%;
+        display:none;
+    }
+    .popup-header{
+        width: 100%;
+        position: relative;
+    }
+    .popup-header .popup-image{
+        margin-right: 20px;
+        width: 15%;
+    }
+    .popup-title h1{
+        text-transform: initial!important;
+        margin-top: 8px;
+    }
+    .popup-title p{
+        text-transform: none!important;
+    }
+    .popup-body{
+        margin-top: 30px;
+    }
+    .close{
+        width: 100px;
+        height: 100px;
+        color: #fff;
+        position: fixed;
+        right: -30px;
+        top: 20px;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 450px) {
+        .popup-card{
+            width: 75% !important;
+            left: 12.5% !important;
+        }
+    }
+    
+    
+    /* Fading animation */
+    .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    transition:1.5s all ease-in-out;
+    }
+    
+    @-webkit-keyframes fade {
+    from {opacity: .4; transform:translateY(600px);}
+    to {opacity: 1; transform:translatYX(0px);}
+    }
+    
+    @keyframes fade {
+    from {opacity: .4; transform:translateY(600px);}
+    to {opacity: 1; transform:translateY(0px);}
+    }
+    
+}

@@ -1,0 +1,43 @@
+#hero-x-wrapper .hero {
+  padding-top: 0.75rem;
+}
+#hero-x-wrapper .columns {
+  background-color: var(--app-secondary-color);
+  -webkit-clip-path: polygon(100% 0px, 100% 100%, 0% 100%, 0px 15%);
+          clip-path: polygon(100% 0px, 100% 100%, 0% 100%, 0px 15%);
+  margin-top: 0;
+}
+#hero-x-wrapper .column {
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+}
+#hero-x-wrapper .text-column {
+  align-items: center;
+}
+#hero-x-wrapper .pro-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 4;
+}
+#hero-x-wrapper .progress.is-small {
+  height: 8px !important;
+}
+#hero-x-wrapper .progress.is-primary:indeterminate {
+  background-image: linear-gradient(to right, var(--app-accent-color) 30%, #dbdbdb 30%) !important;
+}
+#hero-x-wrapper .overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 228, 228, 0.5);
+  z-index: 2;
+}
+@media screen and (max-width: 770px) {
+  #hero-x-wrapper .columns {
+    -webkit-clip-path: polygon(100% 0px, 100% 100%, 0% 100%, 0px 8%);
+            clip-path: polygon(100% 0px, 100% 100%, 0% 100%, 0px 8%);
+  }
+}/*# sourceMappingURL=landing-form-2.css.map */

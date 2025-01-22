@@ -1,0 +1,67 @@
+html {
+  overflow-y: hidden !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--grey-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--grey-light);
+  cursor: pointer;
+}
+
+.modal-background {
+  background-color: var(--scheme-invert--20--rgba) !important;
+}
+
+.card, .dropdown-content {
+  box-shadow: var(--global-box-shadow);
+}
+
+h1 {
+  font-size: var(--heading-1--size);
+  line-height: var(--heading-1--line-height);
+}
+
+h2 {
+  font-size: var(--heading-2--size);
+  line-height: var(--heading-2--line-height);
+}
+
+h3 {
+  font-size: var(--heading-3--size);
+  line-height: var(--heading-3--line-height);
+}
+
+h4 {
+  font-size: var(--heading-4--size);
+  line-height: var(--heading-4--line-height);
+}
+
+h5 {
+  font-size: var(--heading-5--size);
+  line-height: var(--heading-5--line-height);
+}
+
+h6 {
+  font-size: var(--heading-6--size);
+  line-height: var(--heading-6--line-height);
+}
+
+.input {
+  border: 1px solid var(--input-border-color);
+  padding: var(--input-padding);
+  height: var(--input-height);
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.3);
+  background: rgba(255, 255, 255, 0.11);
+  background-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}/*# sourceMappingURL=global-styles.css.map */
