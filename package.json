@@ -101,5 +101,6 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-preload": "^0.4.2",
     "vite-plugin-watcher": "^0.1.3"
-  }
+  },
+  "license": "MIT"
 }
